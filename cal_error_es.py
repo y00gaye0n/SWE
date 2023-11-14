@@ -9,7 +9,7 @@ except ValueError:
 op = input() #op는 연산자
 
 while(op!='='): #연산자가 =이 나오기전까지 반복연산
-     try:
+    try:
         y = int(input())
     except ValueError:
         y = 0
@@ -21,7 +21,12 @@ while(op!='='): #연산자가 =이 나오기전까지 반복연산
         x -= y 
     elif (op == '*'): 
         x *= y 
-     op = input()
+        
+    op2 = input() # 다음 연산자 입력
+    if (op != op2): # 동일한 연산인지 확인
+        op = op2
+        if (op != '='):
+            error += 1
 print(x) #출력
 
 

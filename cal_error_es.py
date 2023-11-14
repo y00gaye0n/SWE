@@ -9,7 +9,11 @@ except ValueError:
 op = input() #op는 연산자
 
 while(op!='='): #연산자가 =이 나오기전까지 반복연산
-    y=int(input()) 
+     try:
+        y = int(input())
+    except ValueError:
+        y = 0
+        error += 1
 
     if (op == '+'): 
         x += y 

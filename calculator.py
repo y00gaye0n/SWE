@@ -1,16 +1,16 @@
-x=int(input()) #철언
+x=int(input()) #x는 첫번째 피연산자
 
-op = input() #철언
+op = input() #op는 연산자
 
-while(op!='='): #철언
-    y=int(input()) #철언
+while(op!='='): #연산자가 =이 나오기전까지 반복연산
+    y=int(input()) 
 
-    if (op == '+'): #철언
-        x += y #철언
-    elif (op == '-'): #철언
-        x -= y #철언
-    elif (op == '*'): #철언
-        x *= y #철언
-    op = input() #철언
+    if (op == '+'): 
+        x += y 
+    elif (op == '-'): 
+        x -= y 
+    elif (op == '*'): 
+        x *= y 
+    op = input() 
     
-print(x) #철
+print(x) #출력

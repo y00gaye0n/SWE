@@ -17,7 +17,7 @@ while(op!='='): #연산자가 =이 나오기전까지 반복연산
         x -= y 
     elif (op == '*'): 
         x *= y 
-    
+     op = input()
 print(x) #출력
 
 

@@ -1,16 +1,16 @@
-x=int(input())
+x=int(input()) #철언
 
-op = input()
+op = input() #철언
 
-while(op!='='):
-    y=int(input())
+while(op!='='): #철언
+    y=int(input()) #철언
 
-    if (op == '+'):
-        x += y
-    elif (op == '-'):
-        x -= y
-    elif (op == '*'):
-        x *= y
-    op = input()
+    if (op == '+'): #철언
+        x += y #철언
+    elif (op == '-'): #철언
+        x -= y #철언
+    elif (op == '*'): #철언
+        x *= y #철언
+    op = input() #철언
     
-print(x)
+print(x) #철

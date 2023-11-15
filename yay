@@ -1,0 +1,36 @@
+def eggMessages(num):   #이스터에그 함수, 함수에 정수하나 입력 받아서 해당 수가 특이한 숫자일 경우 문장 출력
+    if num == 7:
+        print("행운")
+    elif num == 1221:
+        print("종강종강 돌을 던지자")
+    elif num == 18:
+        print("바른말고운말")
+    elif num == 0:
+        print("0은 여기서 False란다")
+    elif num == 1:
+        print("1은 여기서 True란다")
+    elif num == 2:
+        print("Binary..?")
+    elif num == 534:
+        print("컴공생들의 무덤")
+
+first_operand = int(input())  # 첫 번째 피연산자 입력
+eggMessages(first_operand)
+operator = input()  # 연산자 입력
+
+while operator != '=':  # '='가 입력될 때까지 반복
+    next_operand = int(input())
+    eggMessages(next_operand)
+    
+    if operator == '/':  # 나눗셈 연산을 허용하지 않음
+        print("이 계산기는 나눗셈을 지원하지 않습니다!")
+        break
+    elif operator == '+':
+        first_operand += next_operand
+    elif operator == '-':
+        first_operand -= next_operand
+    elif operator == '*':
+        first_operand *= next_operand
+    
+    operator = input()  # 다음 연산자 입력
+    print(first_operand)  # 결과 출력

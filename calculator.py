@@ -20,8 +20,8 @@ error = 0
 first_operand = 0
 
 try:
-    first_operand = int(input())  # x는 첫번째 피연산자 입력
-    egg_messages(first_operand)  # 특한 숫자인 경우 메시지 출력
+    first_operand = int(input())  # 첫번째 피연산자 입력
+    egg_messages(first_operand)  # 특정한 숫자인 경우 메시지 출력
 except ValueError:
     error += 1
 

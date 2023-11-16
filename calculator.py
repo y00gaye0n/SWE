@@ -27,7 +27,7 @@ except ValueError:
 
 operator = input()  # 연산자 입력
 
-# 연산자가 '='이 나오기 전까지 연산을 반복한다.
+# 연산자가 '='이 나오기 전까지 연산을 반복
 while operator != '=':
     try:
         next_operand = int(input())

@@ -1,4 +1,5 @@
-def eggMessages(num):  # 이스터에그 함수, 함수에 정수하나 입력 받아서 해당 수가 특이한 숫자일 경우 문장 출
+# 이스터에그 함수, 특정한 숫자일 때 특별한 메시지 출력
+def egg_messages(num):
     if num == 7:
         print("행운")
     elif num == 1221:
@@ -16,40 +17,43 @@ def eggMessages(num):  # 이스터에그 함수, 함수에 정수하나 입력 �
 
 
 error = 0
-firstOperand = 0
+first_operand = 0
 
 try:
-    firstOperand = int(input())  # x는 첫번째 피연산자
-    eggMessages(firstOperand)
+    first_operand = int(input())  # x는 첫번째 피연산자 입력
+    egg_messages(first_operand)  # 특한 숫자인 경우 메시지 출력
 except ValueError:
     error += 1
 
-operator = input()  # operator는 연산자
+operator = input()  # 연산자 입력
 
-while operator != '=':  # 연산자가 =이 나오기 전까지 반복연산
+# 연산자가 '='이 나오기 전까지 연산을 반복한다.
+while operator != '=':
     try:
-        nextOperand = int(input())
-        eggMessages(nextOperand)
+        next_operand = int(input())
+        egg_messages(next_operand)
     except ValueError:
         error += 1
 
+    # 지원되는 연산자인지 확인 후 계산 수행
     if operator == '+':
-        firstOperand += nextOperand
+        first_operand += next_operand
     elif operator == '-':
-        firstOperand -= nextOperand
+        first_operand -= next_operand
     elif operator == '*':
-        firstOperand *= nextOperand
+        first_operand *= next_operand
     else:
-        error += 1  # 더하기, 빼기, 곱하기 연산자 이외의 것일 경우 error 출력
+        error += 1  # 잘못된 연산자가 입력된 경우 에러 카운트 증가
 
-    nextOperator = input()  # 다음 연산자 입력
+    next_operator = input()  # 다음 연산자 입력
 
-    if operator != nextOperator :   # 동일한 연산인지 확인
-        operator = nextOperator
+
+    if operator != next_operator :  # 동일한 연산인지 확인
+        operator = next_operator
         if operator != '=':
             error += 1
 
 if error > 0:
-    print("ERROR!")
+    print("ERROR!")  # 에러가 발생했을 때 "ERROR!" 출력
 else:
-    print(firstOperand)  # 출력
+    print(first_operand)  # 계산 결과 출력

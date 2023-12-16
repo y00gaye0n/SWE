@@ -1,19 +1,21 @@
 # 이스터에그 함수, 특정한 숫자일 때 특별한 메시지 출력
 def egg_messages(num):
     if num == 7:
-        print("행운")
+        print("[EVENT] 행운")
     elif num == 1221:
-        print("종강종강 돌을 던지자")
+        print("[EVENT] 종강종강 돌을 던지자")
     elif num == 18:
-        print("바른말고운말")
+        print("[EVENT] 바른말고운말")
     elif num == 0:
-        print("0은 여기서 False란다")
+        print("[EVENT] 0은 여기서 False란다")
     elif num == 1:
-        print("1은 여기서 True란다")
+        print("[EVENT] 1은 여기서 True란다")
     elif num == 2:
-        print("Binary..?")
+        print("[EVENT] Binary..?")
     elif num == 534:
-        print("컴공생들의 무덤")
+        print("[EVENT] 컴공생들의 무덤")
+    elif num == 1015:
+        print("[EVENT] 전북대 개교기념일입니다.")
 
 
 error = 0
@@ -35,15 +37,16 @@ while operator != '=':
     except ValueError:
         error += 1
 
-    # 지원되는 연산자인지 확인 후 계산 수행
-    if operator == '+':
-        first_operand += next_operand
-    elif operator == '-':
-        first_operand -= next_operand
-    elif operator == '*':
-        first_operand *= next_operand
-    else:
-        error += 1  # 잘못된 연산자가 입력된 경우 에러 카운트 증가
+    # 지원되는 연산자인지와 에러 발생 여부 확인 후 계산 수행
+    if (error == 0):
+        if operator == '+':
+            first_operand += next_operand
+        elif operator == '-':
+            first_operand -= next_operand
+        elif operator == '*':
+            first_operand *= next_operand
+        else:
+            error += 1  # 잘못된 연산자가 입력된 경우 에러 카운트 증가
 
     next_operator = input()  # 다음 연산자 입력
 
@@ -54,6 +57,6 @@ while operator != '=':
             error += 1
 
 if error > 0:
-    print("ERROR!")  # 에러가 발생했을 때 "ERROR!" 출력
+    print("[SYSYEM] ERROR!")  # 에러가 발생했을 때 "ERROR!" 출력
 else:
     print(first_operand)  # 계산 결과 출력
